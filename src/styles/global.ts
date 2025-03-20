@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export default createGlobalStyle`
     * {
@@ -13,6 +14,7 @@ export default createGlobalStyle`
         color: ${({theme}) => theme.COLORS.WHITE};
 
         -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
     }
 
     body, input, button, textarea {
@@ -39,3 +41,11 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
 `
+
+export const Container = styled.div`
+    width: 100%;
+    max-width: 1400px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 5rem; /* Adiciona espaçamento interno */
+    height: 100%; /* Permite que o conteúdo ocupe toda a altura */
+`;
